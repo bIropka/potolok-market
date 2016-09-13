@@ -1,33 +1,28 @@
 @font-face {
-    font-family: 'Proxima Nova Regular';
-    src: url("../source/fonts/ProximaNovaRegular.woff") format("woff"), url("../source/fonts/ProximaNovaRegular.ttf") format("truetype");
+    font-family: 'Arimo Regular';
+    src: url("../source/fonts/Arimo-Regular.woff") format("woff"), url("../source/fonts/Arimo-Regular.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Proxima Nova Bold';
-    src: url("../source/fonts/ProximaNovaBold.woff") format("woff"), url("../source/fonts/ProximaNovaBold.ttf") format("truetype");
+    font-family: 'Baufra Bold';
+    src: url("../source/fonts/Baufra-Bold.otf") format('opentype'), url("../source/fonts/Baufra-Bold.woff") format("woff"), url("../source/fonts/Baufra-Bold.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Proxima Nova Light';
-    src: url("../source/fonts/ProximaNovaLight.woff") format("woff"), url("../source/fonts/ProximaNovaLight.ttf") format("truetype");
+    font-family: 'ClearSans Bold';
+    src: url("../source/fonts/ClearSans-Bold.woff") format("woff"), url("../source/fonts/ClearSans-Bold.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
-    font-family: 'PTSans Regular';
-    src: url("../source/fonts/PTSansRegular.woff") format("woff"), url("../source/fonts/PTSansRegular.ttf") format("truetype");
+    font-family: 'Greta Dis Nar Pro Medium';
+    src: url("../source/fonts/Greta-Dis-Nar-Pro-Med.otf") format('opentype'), url("../source/fonts/Greta-Dis-Nar-Pro-Med.woff") format("woff"), url("../source/fonts/Greta-Dis-Nar-Pro-Med.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
-@font-face {
-    font-family: 'PTSans Bold';
-    src: url("../source/fonts/PTSansBold.woff") format("woff"), url("../source/fonts/PTSansBold.ttf") format("truetype");
-    font-weight: 300;
-    font-style: normal;
-}
+
 
 /******************************
 ********** general ************
@@ -40,8 +35,8 @@
     box-sizing: border-box;
     font-size: 16px;
     line-height: 1.4;
-    color: #2b2b2b;
-    font-family: 'PTSans Regular', sans-serif;
+    color: #000000;
+    font-family: 'Arimo Regular', sans-serif;
 }
 
 html, body {
@@ -92,41 +87,15 @@ ul li, ol li {
 }
 
 h1 {
-    font-family: "Proxima Nova Light", sans-serif;
-    font-size: 2.1875em;
-    color: #ffffff;
-    font-weight: 100;
-    line-height: 1.2;
+    font-size: 1.875em;
+    color: #999999;
 }
-h1 span {
-    display: inline-block;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-}
+
 h2 {
-    font-size: 1.5625em;
-    font-weight: 100;
-    line-height: 1.2;
+    font-size: 2.5em;
 }
 h3 {
-    font-family: 'PTSans Bold', sans-serif;
-    font-size: 1.0625em;
-    font-weight: 100;
-}
-button {
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    font-family: 'PTSans Bold', sans-serif;
-    font-size: 12px;
-    color: #ffffff;
-    text-transform: uppercase;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    font-size: 2em;
 }
 .image-wrap {
     display: block;
@@ -136,8 +105,8 @@ button {
 }
 .image-wrap img {
     display: block;
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -146,8 +115,7 @@ button {
 .wrapper {
     display: block;
     width: 100%;
-    max-width: 1220px;
-    padding: 0 20px;
+    max-width: 1200px;
     position: relative;
     margin: 0 auto;
 }
@@ -165,33 +133,79 @@ button {
 .validatr-message {
     display: none;
 }
-
 .invalid-field {
     border: 1px solid #ff0000!important;
 }
 
-.custom-checkbox {
-    display: none;
+.in-wide {
+    -moz-text-align-last: justify;
+    -ms-text-align-last: justify;
+    text-align-last: justify;
+    text-align: justify;
 }
-.custom-checkbox-wrap {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 0.8125em;
-    color: #bbbbbb;
-}
-.custom-checkbox-wrap:before {
+.in-wide:after {
     content: '';
     display: inline-block;
-    vertical-align: middle;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #e1e1e1;
-    margin-right: 20px;
+    width: 100%;
 }
-.custom-checkbox:checked + .custom-checkbox-wrap:before {
-    background: url('../source/images/icon-ok.png') no-repeat center;
-    background-size: cover;
+
+.hidden {
+    display: none;
 }
-.custom-checkbox.invalid-field + .custom-checkbox-wrap:before {
-    border: 1px solid #ff0000;
+
+main {
+    display: block;
+    min-height: 60vh;
 }
+
+/******************************
+********** header ************
+******************************/
+
+
+
+/******************************
+********** footer ************
+******************************/
+
+/******************************
+********** main page **********
+******************************/
+
+
+
+
+
+
+
+/******************************
+********** general ************
+******************************/
+
+/******************************
+********** general ************
+******************************/
+
+/******************************
+********** general ************
+******************************/
+
+/******************************
+********** general ************
+******************************/
+
+/******************************
+********** general ************
+******************************/
+
+/******************************
+********** general ************
+******************************/
+
+/******************************
+********** general ************
+******************************/
+
+/******************************
+********** general ************
+******************************/
