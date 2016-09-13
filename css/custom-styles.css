@@ -341,7 +341,26 @@ nav ul li a:hover:after {
     background: linear-gradient(to bottom, #e6e6e6, #b0b0b0);
     text-align: right;
 }
-.header-bottom a
+.header-bottom .wrapper {
+    font-size: 0;
+}
+.header-bottom .catalog-link {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid red;
+    font-size: 21px;
+}
+.header-bottom form {
+    display: inline-block;
+    text-align: left;
+    border: 1px solid red;
+}
+.header-bottom .cart {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid red;
+    font-size: 1em;
+}
 
 
 /******************************
