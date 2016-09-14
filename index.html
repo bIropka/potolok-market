@@ -111,7 +111,7 @@
 
 <main class="main-page">
 
-    <div class="slider-wrap">
+    <div class="slider-wrap slider-main-top-wrap">
 
         <div class="slider-controls">
             <i class="fa fa-angle-left"></i>
@@ -179,58 +179,989 @@
 
             <form action="#" class="form-product-chooser">
 
-                <div class="custom-select">
-                    <div class="title">Производитель:</div>
-                    <div class="current-value">Выбрать</div>
-                    <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
-                    <ul>
-                        <li>Название</li>
-                        <li>Длинное название</li>
-                        <li>Очень длинное название</li>
-                        <li>Неприлично длинное название</li>
-                    </ul>
-                    <label class="hidden"><input type="text" id="product-chooser-brand"></label>
-                </div>
+                <fieldset>
 
-                <div class="custom-select">
-                    <div class="title">Фактура:</div>
-                    <div class="current-value">Выбрать</div>
-                    <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
-                    <ul>
-                        <li>Название</li>
-                        <li>Длинное название</li>
-                        <li>Очень длинное название</li>
-                        <li>Неприлично длинное название</li>
-                    </ul>
-                    <label class="hidden"><input type="text" id="product-chooser-texture"></label>
-                </div>
+                    <div class="custom-select">
+                        <div class="title">Производитель:</div>
+                        <div class="current-value">Выбрать</div>
+                        <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
+                        <ul>
+                            <li>Название</li>
+                            <li>Длинное название</li>
+                            <li>Очень длинное название</li>
+                            <li>Неприлично длинное название</li>
+                        </ul>
+                        <label class="hidden"><input type="text" id="product-chooser-brand"></label>
+                    </div>
 
-                <div class="custom-select">
-                    <div class="title">Ширина:</div>
-                    <div class="current-value">Выбрать</div>
-                    <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
-                    <ul>
-                        <li>Название</li>
-                        <li>Длинное название</li>
-                        <li>Очень длинное название</li>
-                        <li>Неприлично длинное название</li>
-                    </ul>
-                    <label class="hidden"><input type="text" id="product-chooser-width"></label>
-                </div>
+                    <div class="custom-select">
+                        <div class="title">Фактура:</div>
+                        <div class="current-value">Выбрать</div>
+                        <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
+                        <ul>
+                            <li>Название</li>
+                            <li>Длинное название</li>
+                            <li>Очень длинное название</li>
+                            <li>Неприлично длинное название</li>
+                        </ul>
+                        <label class="hidden"><input type="text" id="product-chooser-texture"></label>
+                    </div>
 
-                <div class="form-slider">
+                    <div class="custom-select">
+                        <div class="title">Ширина:</div>
+                        <div class="current-value">Выбрать</div>
+                        <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
+                        <ul>
+                            <li>Название</li>
+                            <li>Длинное название</li>
+                            <li>Очень длинное название</li>
+                            <li>Неприлично длинное название</li>
+                        </ul>
+                        <label class="hidden"><input type="text" id="product-chooser-width"></label>
+                    </div>
 
-                    <div class="title">Цена:</div>
+                    <div class="form-slider">
 
-                    <div class="form-slider-image"></div>
+                        <div class="title">Цена:</div>
 
-                    <div class="current-amount">до <span>0</span> грн</div>
+                        <div class="form-slider-image"></div>
 
-                    <label class="hidden"><input type="text" id="form-slider-amount"/></label>
+                        <div class="current-amount">до <span>500</span> грн</div>
 
-                </div>
+                        <label class="hidden"><input type="text" id="form-slider-amount"/></label>
+
+                    </div>
+
+                    <button type="reset"><i class="fa fa-times"></i>СБРОСИТЬ ФИЛЬТР</button>
+
+                </fieldset>
+
+                <button type="submit"><i class="fa fa-search"></i>ПОДОБРАТЬ</button>
 
             </form>
+
+        </div>
+
+    </div>
+
+    <div class="products">
+
+        <div class="wrapper">
+
+            <h2>До конца акционной недели осталось:</h2>
+
+            <div class="timer">
+
+                <ul>
+
+                    <li> <span class="days">00</span>
+                        <p class="days_ref">дней</p>
+                    </li>
+
+                    <li> <span class="hours">00</span>
+                        <p class="hours_ref">часов</p>
+                    </li>
+
+                    <li> <span class="minutes">00</span>
+                        <p class="minutes_ref">минут</p>
+                    </li>
+
+                    <li> <span class="seconds">00</span>
+                        <p class="seconds_ref">секунд</p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <ul class="product-list">
+
+                <li class="product-card">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-25%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-15%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-10%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-50%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-35%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-3%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card hidden">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-25%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card hidden">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-25%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card hidden">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-25%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card hidden">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-25%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card hidden">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-25%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+                <li class="product-card hidden">
+                    <a href="#" class="image-wrap">
+                        <div class="mark-yellow">-25%</div>
+                        <img src="source/content/image-product-1.jpg" alt="product">
+                    </a>
+                    <div class="product-card-details">
+                        <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                        <div class="block-price">
+                            <div class="current-price">
+                                <span>Цена:</span>
+                                <span class="current-price-value">149 грн</span>
+                            </div>
+                            <div class="old-price">
+                                <span>Старая цена:</span>
+                                <span class="old-price-value">3999 грн</span>
+                            </div>
+                            <div class="economy-size">
+                                <span>Экономия:</span>
+                                <span class="economy-size-value">2000 грн</span>
+                            </div>
+                        </div>
+                        <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                    </div>
+                </li>
+
+            </ul>
+
+            <button class="show-more">ПОКАЗАТЬ ЕЩЕ 6 </button>
+
+        </div>
+
+    </div>
+
+    <div class="mailing">
+
+        <div class="wrapper">
+
+            <div class="text-note">Подпишитесь и получайте в подарок 100 бонусных грн. <span>?</span></div>
+
+            <form action="#" class="form-mailing">
+
+                <label for="mailing-tel"></label>
+                <input type="tel" id="mailing-tel" placeholder="+380" required>
+
+                <button type="submit">ПОДПИСАТЬСЯ</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="products-top">
+
+        <div class="wrapper">
+
+            <h2>Топ продаж</h2>
+
+            <div class="slider-products-top">
+
+                <div class="slide">
+
+                    <ul class="product-list">
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="slide">
+
+                    <ul class="product-list">
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="slide">
+
+                    <ul class="product-list">
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="slide">
+
+                    <ul class="product-list">
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="slide">
+
+                    <ul class="product-list">
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                        <li class="product-card">
+                            <a href="#" class="image-wrap">
+                                <div class="mark-green">Топ</div>
+                                <img src="source/content/image-product-1.jpg" alt="product">
+                            </a>
+                            <div class="product-card-details">
+                                <a href="#" class="product-name">Глянцевый натяжной потолок «Батутси», пр-во Китай</a>
+                                <div class="block-price">
+                                    <div class="current-price">
+                                        <span>Цена:</span>
+                                        <span class="current-price-value">149 грн</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="to-order">ЗАКАЗАТЬ</a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -365,6 +1296,7 @@
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/jquery.downCount.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>

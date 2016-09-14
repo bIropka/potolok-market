@@ -107,7 +107,7 @@ $(document).ready(function () {
     });
 
     var inputTel = $('input[type="tel"]');
-    inputTel.mask("+7 ( 999 ) 999 - 99 - 99");
+    inputTel.mask("+38099 999 - 99 - 99");
     inputTel.click(function() {
         $(this).focus();
     });
@@ -214,29 +214,57 @@ $(document).ready(function () {
 
     var customSliderMin = 500;
     var customSliderMax = 10000;
-    var customSliderStep = 50;
-    var customSliderCurrent = 50;
+    var customSliderStep = 500;
+    var customSliderStart = 500;
     $(".form-slider-image").slider({
         range: 'min',
-        value: customSliderCurrent,
+        value: customSliderStart,
         min: customSliderMin,
         max: customSliderMax,
         step: customSliderStep,
         slide: function(event, ui) {
+            var startLeft = $("#form-slider-amount").parents('.form-slider').find('.current-amount').css('left');
+            var sliderWidth = $(".form-slider-image").css('width');
+            var newLeft = parseInt((parseInt(sliderWidth) * ui.value / customSliderMax)) - 47 -  ((customSliderMax - ui.value) / customSliderStep);
+            console.log(newLeft);
             $("#form-slider-amount").val(ui.value);
             $("#form-slider-amount").parents('.form-slider').find('.current-amount span').html(ui.value);
+
+            $("#form-slider-amount").parents('.form-slider').find('.current-amount').css('left', newLeft);
         }
     });
+    $(".form-product-chooser button[type='reset']").click(function() {
+        $(this).parents('form').find('.current-value').html('Выбрать');
+        $( ".form-slider-image" ).slider( "value", customSliderStart );
+        $(this).parents('form').find('.current-amount').css('left', '-47px');
+        $(this).parents('form').find('.current-amount span').html(customSliderStart);
 
+    });
+
+    $('.timer ul').downCount({
+        date: '09/20/2016 00:00:00',
+        offset: +3
+    });
+
+    $('.products .show-more').click(function() {
+        $(this).siblings('.product-list').find('.hidden').slideDown();
+    });
 
     /*******************************
      ******* slider scripts ********
      ******************************/
 
     $('.slider-main-top').slick({
-        appendArrows: '.slider-controls .fa',
-        prevArrow: '.slider-controls .fa-angle-left',
-        nextArrow: '.slider-controls .fa-angle-right',
+        appendArrows: '.slider-main-top-wrap .slider-controls .fa',
+        prevArrow: '.slider-main-top-wrap .slider-controls .fa-angle-left',
+        nextArrow: '.slider-main-top-wrap .slider-controls .fa-angle-right',
+        dots: true
+    });
+
+    $('.slider-products-top').slick({
+        /*appendArrows: '.slider-products-top .slider-controls .fa',
+        prevArrow: '.slider-products-top .slider-controls .fa-angle-left',
+        nextArrow: '.slider-products-top .slider-controls .fa-angle-right',*/
         dots: true
     });
 
