@@ -93,6 +93,15 @@ h1 {
 
 h2 {
     font-size: 2.5em;
+    text-align: center;
+}
+h2:after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: #ffcd00;
+    margin: 10px auto 0;
 }
 h3 {
     font-size: 2em;
@@ -110,6 +119,11 @@ h3 {
     position: absolute;
     top: 0;
     left: 0;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .wrapper {
@@ -144,12 +158,32 @@ h3 {
 .custom-select {
     position: relative;
 }
+.custom-select .current-value {
+    display: inline-block;
+}
 .custom-select ul {
     display: none;
+    position: absolute;
+    z-index: 1;
+}
+.custom-select ul li {
+    display: block;
+}
+
+.custom-select.active .icon-arrow, .phones-select.active .icon-arrow {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 .hidden {
     display: none;
+}
+
+.slider-wrap {
+    position: relative;
 }
 
 main {
@@ -873,11 +907,303 @@ nav ul li a:hover:after {
 ********** main page **********
 ******************************/
 
+.slider-controls {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 45%;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 1;
+}
+.slider-controls:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.slider-controls .fa {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 2em;
+    cursor:pointer;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+.slider-controls .fa:hover {
+    background-color: #ffffff;
+    color: #808080;
+}
+.slider-controls .fa-angle-left {
+    float: left;
+    margin-left: 10px;
+}
+.slider-controls .fa-angle-right {
+    float: right;
+    margin-right: 10px;
+}
+.slider-main-top .slide {
+    position: relative;
+}
+.slider-main-top .slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    text-align: center;
+    z-index: 2;
+}
+.slider-main-top .slick-dots li {
+    margin: 0 5px;
+}
+.slider-main-top .slick-dots li button {
+    display: block;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.slider-main-top .slick-dots li button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.slider-main-top .slick-dots li.slick-active button {
+    background-color: rgba(255, 255, 255, 1);
+}
+.slider-main-top img {
+    display: block;
+    width: auto;
+}
+.slider-main-top .slide-text {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    z-index: 3;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    right: 0;
+}
+.slider-main-top .slide-text .number {
+    display: block;
+    width: 136px;
+    height: 142px;
+    margin: 0 auto;
+    font-family: 'Greta Dis Nar Pro Medium', sans-serif;
+    font-size: 5.375em;
+    color: #ffffff;
+    background: transparent url('../source/images/laurel.png') no-repeat center;
+    background-size: cover;
+}
+.slider-main-top .slide-text p {
+    display: inline-block;
+    width: 60%;
+    font-size: 2.5em;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-top: 20px;
+}
 
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
 
+.advantages li i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    font-size: 2.5em;
+    color: #b3b3b3;
+}
+.advantages li p {
+    display: inline-block;
+    vertical-align: middle;
+}
+.advantages li span {
+    display: block;
+    line-height: 1;
+}
 
+.product-chooser {
+    background: url('../source/content/background-product-chooser.jpg') no-repeat center;
+    background-size: cover;
+    padding: 5% 0;
+}
+.product-chooser h2 {
+    color: #ffffff;
+}
+.form-product-chooser {
+    background-color: #efefef;
+    margin-top: 3%;
+    padding: 50px 30px 25px 30px;
+}
+.form-product-chooser:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.form-product-chooser .custom-select {
+    display: block;
+    width: 20%;
+    height: 50px;
+    float: left;
+    position: relative;
+    background: linear-gradient(to bottom, #f7f7f7, #cfcfcf 90%);
+    -webkit-box-shadow: inset 0 5px 5px -2px rgba(255,255,255,0.25), inset 0 -3px 5px -2px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0 5px 5px -2px rgba(255,255,255,0.25), inset 0 -3px 5px -2px rgba(0,0,0,0.25);
+    box-shadow: inset 0 5px 5px -2px rgba(255,255,255,0.25), inset 0 -3px 5px -2px rgba(0,0,0,0.25);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin-right: 2%;
+}
+.form-product-chooser .custom-select .title {
+    position: absolute;
+    top: -50%;
+    color: #4d4d4d;
+}
+.form-product-chooser .custom-select .current-value {
+    max-width: 90%;
+    height: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #4d4d4d;
+    line-height: 50px;
+    padding-left: 5%;
+}
+.form-product-chooser .custom-select.active {
+    -webkit-box-shadow: inset 0 5px 5px -2px rgba(255,255,255,0.25);
+    -moz-box-shadow: inset 0 5px 5px -2px rgba(255,255,255,0.25);
+    box-shadow: inset 0 5px 5px -2px rgba(255,255,255,0.25);
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
+}
+.form-product-chooser .custom-select ul {
+    width: 100%;
+    top: 45px;
+    padding: 10px 5%;
+    background: #cfcfcf;
+    -webkit-border-radius: 0 0 8px 8px;
+    -moz-border-radius: 0 0 8px 8px;
+    border-radius: 0 0 8px 8px;
+}
+.form-product-chooser .custom-select ul li {
+    margin: 5px 0;
+    cursor: pointer;
+    color: #4d4d4d;
+}
+.form-product-chooser .custom-select ul li:hover {
+    color: #ffcd00;
+}
+.form-product-chooser .custom-select .icon-arrow {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    line-height: 50px;
+}
 
+.form-product-chooser .form-slider {
+    display: block;
+    width: 34%;
+    height: 50px;
+    float: left;
+    position: relative;
+}
+.form-product-chooser .form-slider .title {
+    position: absolute;
+    top: -50%;
+    color: #4d4d4d;
+}
+.form-slider-image {
+    position: absolute;
+    height: 20px;
+    margin: auto;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
 
+.form-slider-image {
+    -webkit-border-radius: 10px!important;
+    -moz-border-radius: 10px!important;
+    border-radius: 10px!important;
+    background: linear-gradient(to bottom, #808080, #c3c3c3);
+}
+.form-slider-image .ui-widget-header {
+    -webkit-border-radius: 10px 0 0 10px!important;
+    -moz-border-radius: 10px 0 0 10px!important;
+    border-radius: 10px 0 0 10px!important;
+    background: linear-gradient(to bottom, #fff952, #ffd301)
+}
+.form-slider .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: linear-gradient(to bottom, #e6e6e6, #adadad);
+    left: 0;
+    top: -10px;
+}
+.form-slider .ui-slider .ui-slider-handle:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: linear-gradient(to right, #efefef, #aeaeae);
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+.form-slider .ui-slider .ui-slider-handle:hover {
+    background: linear-gradient(to top, #e6e6e6, #adadad);
+}
+.form-slider .ui-slider .ui-slider-handle:hover:before {
+    background: linear-gradient(to left, #efefef, #aeaeae);
+}
+
+.form-slider .ui-slider .ui-slider-handle:focus, .form-slider .ui-slider .ui-slider-handle:active {
+    outline: none;
+    border: 1px solid rgba(197, 197, 197, 1);
+}
+.form-slider .current-amount {
+    text-align: center;
+    display: block;
+    width: 110px;
+    height: 40px;
+    background-color: #4d4d4d;
+    color: #ffffff;
+    line-height: 40px;
+    position: absolute;
+    left: -50px;
+    top: 110%;
+}
+.form-slider .current-amount span {
+    color: #ffffff;
+    line-height: 40px;
+}
 
 /******************************
 ********** general ************

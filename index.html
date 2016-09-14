@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/custom-styles.css"/>
 </head>
 <body>
@@ -61,7 +62,7 @@
             <div class="custom-select city-select">
                 <i class="fa fa-map-marker"></i>
                 <div class="current-value">Харьков</div>
-                <i class="fa fa-angle-down"></i>
+                <i class="fa fa-angle-down icon-arrow"></i>
                 <ul>
                     <li>Харьков</li>
                     <li>Киев</li>
@@ -72,7 +73,7 @@
             <div class="phones-select">
                 <i class="fa fa-mobile"></i>
                 <a href="tel:0577555124">057 7 555 124</a>
-                <i class="fa fa-angle-down"></i>
+                <i class="fa fa-angle-down  icon-arrow"></i>
                 <div class="callback">ЗАКАЗАТЬ ЗВОНОК</div>
                 <ul>
                     <li><a href="tel:0577555125">057 7 555 125</a></li>
@@ -110,7 +111,130 @@
 
 <main class="main-page">
 
+    <div class="slider-wrap">
 
+        <div class="slider-controls">
+            <i class="fa fa-angle-left"></i>
+            <i class="fa fa-angle-right"></i>
+        </div>
+
+        <div class="slider-main-top">
+
+            <div class="slide">
+                <img src="source/content/main-slide.jpg" alt="slide">
+                <div class="slide-text">
+                    <div class="number">1</div>
+                    <p>Первый онлайн мегамаркет натяжных потолков</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="source/content/main-slide.jpg" alt="slide">
+                <div class="slide-text">
+                    <div class="number">2</div>
+                    <p>Первый онлайн мегамаркет натяжных потолков</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="source/content/main-slide.jpg" alt="slide">
+                <div class="slide-text">
+                    <div class="number">3</div>
+                    <p>Первый онлайн мегамаркет натяжных потолков</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+
+        <ul class="advantages">
+            <li>
+                <i class="fa fa-money"></i>
+                <p><span>Цены от</span><span>производителя</span></p>
+            </li>
+            <li>
+                <i class="fa fa-thumbs-o-up"></i>
+                <p><span>Проверенное</span><span>качество</span></p>
+            </li>
+            <li>
+                <i class="fa fa-truck"></i>
+                <p><span>Доставка</span><span>по всей Украине</span></p>
+            </li>
+            <li>
+                <i class="fa fa-diamond"></i>
+                <p><span>Фирменная</span><span>гарантия</span></p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="product-chooser">
+
+        <div class="wrapper">
+
+            <h2>Я ищу натяжной потолок</h2>
+
+            <form action="#" class="form-product-chooser">
+
+                <div class="custom-select">
+                    <div class="title">Производитель:</div>
+                    <div class="current-value">Выбрать</div>
+                    <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
+                    <ul>
+                        <li>Название</li>
+                        <li>Длинное название</li>
+                        <li>Очень длинное название</li>
+                        <li>Неприлично длинное название</li>
+                    </ul>
+                    <label class="hidden"><input type="text" id="product-chooser-brand"></label>
+                </div>
+
+                <div class="custom-select">
+                    <div class="title">Фактура:</div>
+                    <div class="current-value">Выбрать</div>
+                    <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
+                    <ul>
+                        <li>Название</li>
+                        <li>Длинное название</li>
+                        <li>Очень длинное название</li>
+                        <li>Неприлично длинное название</li>
+                    </ul>
+                    <label class="hidden"><input type="text" id="product-chooser-texture"></label>
+                </div>
+
+                <div class="custom-select">
+                    <div class="title">Ширина:</div>
+                    <div class="current-value">Выбрать</div>
+                    <i class="fa fa-caret-down icon-arrow" aria-hidden="true"></i>
+                    <ul>
+                        <li>Название</li>
+                        <li>Длинное название</li>
+                        <li>Очень длинное название</li>
+                        <li>Неприлично длинное название</li>
+                    </ul>
+                    <label class="hidden"><input type="text" id="product-chooser-width"></label>
+                </div>
+
+                <div class="form-slider">
+
+                    <div class="title">Цена:</div>
+
+                    <div class="form-slider-image"></div>
+
+                    <div class="current-amount">до <span>0</span> грн</div>
+
+                    <label class="hidden"><input type="text" id="form-slider-amount"/></label>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </main>
 
@@ -192,7 +316,7 @@
                 <div class="phones-select">
                     <i class="fa fa-mobile"></i>
                     <a href="tel:0577555124">057 7 555 124</a>
-                    <i class="fa fa-angle-down"></i>
+                    <i class="fa fa-angle-down icon-arrow"></i>
                     <ul>
                         <li><a href="tel:0577555125">057 7 555 125</a></li>
                         <li><a href="tel:0577555126">057 7 555 126</a></li>
@@ -236,6 +360,7 @@
 </footer>
 
 <script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/validatr.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>

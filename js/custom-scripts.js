@@ -135,27 +135,26 @@ $(document).ready(function () {
     $('.custom-select').hover(
         function(){
             if ($(window).width() > '980'){
-                $(this).find('.current-value').next('i').removeClass('fa-angle-down fa-angle-up');
-                $(this).find('.current-value').next('i').addClass('fa-angle-up');
+                $(this).addClass('active');
                 $(this).find('ul').stop().slideDown();
             }
         },
         function() {
             if ($(window).width() > '980'){
-                $(this).find('.current-value').next('i').removeClass('fa-angle-down fa-angle-up');
-                $(this).find('.current-value').next('i').addClass('fa-angle-down');
+                $(this).removeClass('active');
                 $(this).find('ul').stop().slideUp();
             }
         });
 
     $('.custom-select .current-value').click(function() {
         if ($(window).width() < '981'){
-            $(this).next('i').toggleClass('active');
+            $(this).parents('.custom-select').toggleClass('active');
             $(this).siblings('ul').stop().slideToggle();
         }
     });
 
     $('.custom-select ul li').click(function() {
+        $(this).parents('.custom-select').removeClass('active');
         $(this).parent('ul').slideUp();
         var value = $(this).html();
         $(this).parent().siblings('.current-value').html(value);
@@ -167,8 +166,10 @@ $(document).ready(function () {
         $target = $(event.target);
 
         if (!$target.closest($('.custom-select')).length){
-            $('.custom-select .current-value').next('i').removeClass('active');
+            $('.custom-select').removeClass('active');
             $('.custom-select ul').slideUp();
+            $('.phones-select').removeClass('active');
+            $('.phones-select ul').slideUp();
         }
 
     });
@@ -176,16 +177,24 @@ $(document).ready(function () {
     $('.phones-select').hover(
         function(){
             if ($(window).width() > '980'){
-                $(this).find('.fa-angle-down').toggleClass('fa-angle-down fa-angle-up');
+                $(this).addClass('active');
                 $(this).find('ul').stop().slideDown();
             }
         },
         function() {
             if ($(window).width() > '980'){
-                $(this).find('.fa-angle-up').toggleClass('fa-angle-down fa-angle-up');
+                $(this).removeClass('active');
                 $(this).find('ul').stop().slideUp();
             }
         });
+
+    $('.phones-select > a').click(function() {
+        if ($(window).width() < '981'){
+            $(this).parents('.custom-select').toggleClass('active');
+            $(this).siblings('ul').stop().slideToggle();
+        }
+        return false;
+    });
 
     $('.form-search').hover(
         function(){
@@ -203,11 +212,33 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop: 0}, 1000);
     });
 
+    var customSliderMin = 500;
+    var customSliderMax = 10000;
+    var customSliderStep = 50;
+    var customSliderCurrent = 50;
+    $(".form-slider-image").slider({
+        range: 'min',
+        value: customSliderCurrent,
+        min: customSliderMin,
+        max: customSliderMax,
+        step: customSliderStep,
+        slide: function(event, ui) {
+            $("#form-slider-amount").val(ui.value);
+            $("#form-slider-amount").parents('.form-slider').find('.current-amount span').html(ui.value);
+        }
+    });
+
 
     /*******************************
      ******* slider scripts ********
      ******************************/
 
+    $('.slider-main-top').slick({
+        appendArrows: '.slider-controls .fa',
+        prevArrow: '.slider-controls .fa-angle-left',
+        nextArrow: '.slider-controls .fa-angle-right',
+        dots: true
+    });
 
 
 });
