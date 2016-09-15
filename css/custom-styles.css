@@ -182,6 +182,28 @@ img {
     display: none;
 }
 
+.button-green {
+    display: inline-block;
+    height: 55px;
+    line-height: 51px;
+    border: 2px solid #97ce2b;
+    text-transform: uppercase;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: transparent;
+    letter-spacing: 3px;
+}
+.button-green:hover {
+    background: linear-gradient(to bottom, #96c738, #6b9b37);
+    border: 2px solid #9fbd63;
+    text-decoration: none;
+}
+.button-green:active {
+    background: linear-gradient(to top, #96c738, #6b9b37);
+    border: 2px solid #9fbd63;
+}
+
 .slider-wrap {
     position: relative;
 }
@@ -1400,25 +1422,8 @@ nav ul li a:hover:after {
     text-decoration: none;
 }
 .product-card .to-order {
-    display: inline-block;
     width: 100%;
-    height: 55px;
-    line-height: 51px;
-    border: 2px solid #97ce2b;
     margin: 5% 0;
-    text-transform: uppercase;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-}
-.product-card .to-order:hover {
-    background: linear-gradient(to bottom, #96c738, #6b9b37);
-    border: 2px solid #9fbd63;
-    text-decoration: none;
-}
-.product-card .to-order:active {
-    background: linear-gradient(to top, #96c738, #6b9b37);
-    border: 2px solid #9fbd63;
 }
 
 .products .show-more {
@@ -1454,8 +1459,64 @@ nav ul li a:hover:after {
 
 .mailing {
     background-color: #1a1a1a;
+    padding: 40px 0;
+}
+.mailing .text-note {
+    display: inline-block;
+    width: 35%;
+    color: #ffffff;
+    font-size: 1.875em;
+}
+.mailing .text-note span {
+    display: inline-block;
+    font-size: 0.7em;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #808080;
+    color: #ffffff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    vertical-align: top;
 }
 
+.form-mailing {
+    display: block;
+    width: 50%;
+    float: right;
+}
+.form-mailing input, .form-mailing button {
+    display: inline-block;
+    width: 47.5%;
+    height: 55px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    vertical-align: bottom;
+}
+.form-mailing label {
+    display: block;
+    color: #ffffff;
+    font-size: 0.9375em;
+    margin-bottom: 5px;
+    padding-left: 15px;
+}
+.form-mailing input {
+    border: none;
+    margin-right: 2%;
+    padding-left: 15px;
+    font-size: 1.625em;
+}
+.form-mailing input[type='tel']::-webkit-input-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
+.form-mailing input[type='tel']::-moz-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
+.form-mailing input[type='tel']:-moz-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
+.form-mailing input[type='tel']:-ms-input-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
+
+.form-mailing button {
+    color: #ffffff;
+}
 
 
 .products-top {
