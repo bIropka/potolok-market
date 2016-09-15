@@ -262,10 +262,18 @@ $(document).ready(function () {
     });
 
     $('.slider-products-top').slick({
-        /*appendArrows: '.slider-products-top .slider-controls .fa',
-        prevArrow: '.slider-products-top .slider-controls .fa-angle-left',
-        nextArrow: '.slider-products-top .slider-controls .fa-angle-right',*/
+        appendArrows: '.slider-controls-products-top .fa',
+        prevArrow: '.slider-controls-products-top .fa-angle-left',
+        nextArrow: '.slider-controls-products-top .fa-angle-right',
         dots: true
+    });
+
+    $('.slider-articles').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        appendArrows: '.slider-controls-articles .fa',
+        prevArrow: '.slider-controls-articles .fa-angle-left',
+        nextArrow: '.slider-controls-articles .fa-angle-right'
     });
 
 

@@ -132,6 +132,8 @@ img {
     max-width: 1200px;
     position: relative;
     margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .wrapper:after {
     content: '';
@@ -182,7 +184,7 @@ img {
     display: none;
 }
 
-.button-green {
+.button-green, .button-yellow, .button-blue {
     display: inline-block;
     height: 55px;
     line-height: 51px;
@@ -194,6 +196,12 @@ img {
     background-color: transparent;
     letter-spacing: 3px;
 }
+.button-yellow {
+    border: 2px solid #f6c926;
+}
+.button-blue {
+    border: 2px solid #00cfff;
+}
 .button-green:hover {
     background: linear-gradient(to bottom, #96c738, #6b9b37);
     border: 2px solid #9fbd63;
@@ -202,6 +210,24 @@ img {
 .button-green:active {
     background: linear-gradient(to top, #96c738, #6b9b37);
     border: 2px solid #9fbd63;
+}
+.button-yellow:hover {
+    background: linear-gradient(to bottom, #f5c826, #d7ab26);
+    text-decoration: none;
+    border: 2px solid #f5c826;
+}
+.button-yellow:active {
+    background: linear-gradient(to top, #f5c826, #d7ab26);
+    border: 2px solid #f5c826;
+}
+.button-blue:hover {
+    background: linear-gradient(to bottom, #08c7fd, #2e87ff);
+    text-decoration: none;color: #ffffff;
+    border: 2px solid #08c7fd;
+}
+.button-blue:active {
+    background: linear-gradient(to top, #08c7fd, #2e87ff);
+    border: 2px solid #08c7fd;
 }
 
 .slider-wrap {
@@ -217,6 +243,10 @@ main {
 ********** header ************
 ******************************/
 
+header .wrapper, footer .wrapper, .advantages-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .header-top {
     background-color: #ffff01;
     text-align: center;
@@ -975,7 +1005,7 @@ nav ul li a:hover:after {
 .slider-main-top .slide {
     position: relative;
 }
-.slider-main-top .slick-dots {
+ .slick-dots {
     position: absolute;
     left: 0;
     right: 0;
@@ -983,10 +1013,10 @@ nav ul li a:hover:after {
     text-align: center;
     z-index: 2;
 }
-.slider-main-top .slick-dots li {
+.slick-dots li {
     margin: 0 5px;
 }
-.slider-main-top .slick-dots li button {
+.slick-dots li button {
     display: block;
     font-size: 0;
     width: 15px;
@@ -996,10 +1026,10 @@ nav ul li a:hover:after {
     -moz-border-radius: 100%;
     border-radius: 100%;
 }
-.slider-main-top .slick-dots li button:hover {
+.slick-dots li button:hover {
     background-color: rgba(255, 255, 255, 0.8);
 }
-.slider-main-top .slick-dots li.slick-active button {
+.slick-dots li.slick-active button {
     background-color: rgba(255, 255, 255, 1);
 }
 .slider-main-top img {
@@ -1062,7 +1092,6 @@ nav ul li a:hover:after {
 .product-chooser {
     background: url('../source/content/background-product-chooser.jpg') no-repeat center;
     background-size: cover;
-    padding: 5% 0;
     text-align: center;
 }
 .product-chooser h2 {
@@ -1308,7 +1337,6 @@ nav ul li a:hover:after {
 .products {
     background-color: #f7f7f7;
     text-align: center;
-    padding: 50px 0;
 }
 .products .timer {
     margin-top: 3%;
@@ -1459,7 +1487,10 @@ nav ul li a:hover:after {
 
 .mailing {
     background-color: #1a1a1a;
-    padding: 40px 0;
+}
+.mailing .wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .mailing .text-note {
     display: inline-block;
@@ -1508,6 +1539,7 @@ nav ul li a:hover:after {
     margin-right: 2%;
     padding-left: 15px;
     font-size: 1.625em;
+    min-width: 260px;
 }
 .form-mailing input[type='tel']::-webkit-input-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
 .form-mailing input[type='tel']::-moz-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
@@ -1520,11 +1552,157 @@ nav ul li a:hover:after {
 
 
 .products-top {
-    padding: 50px;
     background-color: #333333;
 }
 .products-top h2 {
     color: #ffffff;
+}
+.slider-controls-round {
+    width: 100px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+.slider-controls-round .fa {
+    width: 45px;
+    height: 45px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 1px solid #cdcdcd;
+    color: #cdcdcd;
+    text-align: center;
+    line-height: 43px;
+    cursor: pointer;
+    font-size: 2em;
+}
+.slider-controls-round .fa:hover {
+    background-color: #cdcdcd;
+    color: #333333;
+    border: 1px solid #333333;
+}
+.slider-controls-round .fa-angle-left {
+    margin-right: 5px;
+}
+.slider-products-top .slick-dots {
+    position: static;
+}
+
+.make-interior {
+    background: transparent url('../source/content/background-create-interior.jpg') no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+.make-interior p {
+    display: block;
+    width: 50%;
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0 auto 20px;
+}
+.make-interior a {
+    width: 230px;
+    color: #ffffff;
+}
+.make-interior a:hover {
+    color: #000000;
+}
+
+.articles h2:after {
+    background-color: #00cfff;
+}
+
+.slider-articles {
+    margin-top: 50px;
+}
+
+.article-card {
+    width: 380px;
+    margin: 0 10px;
+}
+.article-card .image-wrap {
+    width: 100%;
+    padding-top: 75%;
+}
+.article-card .date {
+    color: #b3b3b3;
+    margin: 10px 0;
+    font-size: 0.875em;
+}
+.article-card .date i {
+    color: #b3b3b3;
+    margin-right: 10px;
+}
+.article-card .article-name {
+    text-align: center;
+    font-size: 1.375em;
+    color: #3680f4;
+    line-height: 1.2;
+}
+.article-card .article-preview {
+    margin: 10px 0 20px;
+}
+.article-card .button-blue {
+    width: 70%;
+    text-align: center;
+}
+
+.ask-questions {
+    background-color: #333333;
+    text-align: center;
+}
+.form-ask-questions .title {
+    color: #ffffff;
+    font-size: 2.5em;
+}
+.form-ask-questions .sub-title {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 0 0 15px;
+}
+
+.form-field-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    width: 315px;
+    height: 55px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    vertical-align: center;
+}
+.form-field {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0 15px;
+    font-size: 1.625em;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+.form-field::-webkit-input-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
+.form-field::-moz-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
+.form-field:-moz-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
+.form-field:-ms-input-placeholder {font-size: 1em; color: rgba(179, 179, 179, 1);}
+
+.form-ask-questions .form-field-wrap {
+    margin: 10px 10px 10px 0;
+}
+.form-ask-questions .form-submit {
+    vertical-align: middle;
+    width: 315px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.main-page h1 {
+    font-size: 1.875em;
+    color: #999999;
+}
+.main-page .promo-text {
+    margin-top: 20px;
+    color: #808080;
 }
 /******************************
 ********** general ************
@@ -1569,5 +1747,21 @@ nav ul li a:hover:after {
     .header-bottom .catalog-link {
         width: 250px;
         font-size: 18px;
+    }
+    .product-card .current-price .current-price-value {
+        font-size: 2.3em;
+    }
+    .product-card .product-name {
+        font-size: 1.2em;
+    }
+    .mailing .text-note {
+        font-size: 1.5em;
+    }
+    .form-mailing {
+        width: 60%;
+        text-align: right;
+    }
+    .form-mailing label {
+        text-align: left;
     }
 }
