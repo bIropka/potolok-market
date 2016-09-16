@@ -2296,6 +2296,9 @@ nav ul li a:hover:after {
     position: relative;
     padding-bottom: 0;
 }
+.slider-history .product-card:focus {
+    outline: none;
+}
 .slider-history .product-card .product-name {
     font-size: 1em;
 }
@@ -2393,5 +2396,8 @@ nav ul li a:hover:after {
     }
     .form-mailing label {
         text-align: left;
+    }
+    .filter-slider input {
+        width: 65px;
     }
 }
