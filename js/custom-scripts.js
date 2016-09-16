@@ -266,13 +266,14 @@ $(document).ready(function () {
     });
     
     /* category page slider */
-    $(".filter-slider-image").slider({
-        value: 500,
+    $( "#filter-slider-image" ).slider({
+        range: true,
         min: 500,
         max: 10000,
-        step: 500,
-        slide: function(event, ui) {
-
+        values: [ 500, 5000 ],
+        slide: function( event, ui ) {
+            $("#filter-slider-price-min").val(ui.values[0] + ' грн');
+            $("#filter-slider-price-max").val(ui.values[1] + ' грн');
         }
     });
 
@@ -291,7 +292,7 @@ $(document).ready(function () {
     });
 
     $('.form-filters .title').click(function() {
-        $(this).next('fieldset').slideToggle();
+        $(this).next('fieldset').stop().slideToggle();
         $(this).find('.fa').toggleClass('fa-angle-up fa-angle-down');
     });
 
@@ -346,10 +347,10 @@ $(document).ready(function () {
 
     $('.slider-history').slick({
         slidesToShow: 5,
-        slidesToScroll: 1/*,
-        appendArrows: '.slider-controls-articles .fa',
-        prevArrow: '.slider-controls-articles .fa-angle-left',
-        nextArrow: '.slider-controls-articles .fa-angle-right'*/
+        slidesToScroll: 1,
+        appendArrows: '.slider-controls-history .fa',
+        prevArrow: '.slider-controls-history .fa-angle-left',
+        nextArrow: '.slider-controls-history .fa-angle-right'
     });
 
 

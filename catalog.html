@@ -208,15 +208,15 @@
 
                     <div class="filter-slider">
 
-                        <label>от: <input type="text" id="filter-slider-price-min"/></label>
+                        <label for="filter-slider-price-min">от: </label><input type="text" id="filter-slider-price-min"/>
 
-                        <label>до: <input type="text" id="filter-slider-price-max"/></label>
+                        <label for="filter-slider-price-max">до: </label><input type="text" id="filter-slider-price-max"/>
 
                         <div class="filter-slider-image" id="filter-slider-image"></div>
 
                     </div>
 
-                    <button type="submit">ПРИМЕНИТЬ</button>
+                    <button type="submit" class="form-submit">ПРИМЕНИТЬ</button>
 
                 </fieldset>
 
@@ -557,6 +557,13 @@
     <div class="history">
 
         <div class="wrapper">
+
+            <h2>Вы просматривали:</h2>
+
+            <div class="slider-controls-round slider-controls-history">
+                <i class="fa fa-angle-left"></i>
+                <i class="fa fa-angle-right"></i>
+            </div>
 
             <div class="slider-history">
 
