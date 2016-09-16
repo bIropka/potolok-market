@@ -2342,8 +2342,17 @@ nav ul li a:hover:after {
 }
 
 /******************************
-********** general ************
+**** payment-delivery page ****
 ******************************/
+
+.payment-delivery-page .content-list {
+    margin-top: 30px;
+}
+
+.payment-delivery-page .content-list .image-wrap {
+
+}
+
 
 /******************************
 ********** general ************
