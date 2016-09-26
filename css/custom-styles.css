@@ -2450,6 +2450,79 @@ nav ul li a:hover:after {
     border-bottom: 1px dashed transparent;
 }
 
+.our-statistics {
+    background: #333333;
+    text-align: center;
+}
+.our-statistics h2 {
+    color: #ffffff;
+}
+.our-statistics ul {
+    margin: 3% 0;
+}
+.our-statistics ul li {
+    width: 300px;
+    margin: 20px;
+}
+.our-statistics i {
+    font-size: 100px;
+    color: #ffffff;
+}
+.our-statistics .digits {
+    font-family: 'ClearSans Bold', sans-serif;
+    color: #ffcc00;
+    font-size: 60px;
+}
+.our-statistics .digits span {
+    display: block;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+.our-statistics .text {
+    color: #ffffff;
+}
+.our-statistics a {
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+    font-size: 1.35em;
+    line-height: 48px;
+    color: #ffffff;
+    letter-spacing: 3px;
+    background-color: transparent;
+    border: 1px solid #f1ca2f;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    margin-top: 50px;
+}
+.our-statistics a:hover {
+    color: #f1ca2f;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+}
+
+.partners .slide {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.partners .slide a {
+    display: block;
+    width: 24.75%;
+    float: left;
+    outline: 2px solid #cccccc;
+    position: relative;
+    margin: 1px;
+}
+.partners .slide a:hover {
+    outline: 2px solid #ffcc00;
+    z-index: 1;
+}
+
+
 /******************************
 ********** general ************
 ******************************/
