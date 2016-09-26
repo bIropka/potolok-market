@@ -31,66 +31,22 @@ $(document).ready(function () {
     });
 
     if ($(window).width() < '981'){
-        $('nav > ul > li ul').fadeOut();
-        $('nav > ul > li p').removeClass('opened');
-        $('.custom-select .current-value').removeClass('active');
-        $('.custom-select ul').slideUp();
+
     } else {
 
     }
 
     $(window).resize(function(){
         if ($(window).width() < '981'){
-            $('nav > ul > li ul').fadeOut();
-            $('nav > ul > li p').removeClass('opened');
+
         } else {
 
         }
     });
 
-    initCounters();
-
-    function initCounters() {
-        var counters = document.getElementsByClassName('dish-counter');
-        for (var i = 0; i < counters.length; i++) {
-            var amount = parseInt($(counters[i]).find('input').val());
-            $(counters[i]).find('.current-value').html(amount);
-        }
-    }
-
     /******************************
      ******* other scripts ********
      ******************************/
-
-    $('nav > ul > li').hover(
-        function() {
-            if ($(window).width() > '980'){
-                $(this).addClass('active');
-                $(this).find('p').addClass('opened');
-                $(this).find('ul').stop().slideDown();
-            }
-        },
-        function() {
-            if ($(window).width() > '980'){
-                $(this).removeClass('active');
-                $(this).find('p').removeClass(' opened');
-                $(this).find('ul').stop().slideUp();
-            }
-        }
-    );
-
-    $('nav > ul > li p').click(function() {
-            if ($(window).width() < 981){
-                $(this).toggleClass('opened');
-                $(this).siblings('ul').stop().slideToggle();
-            }
-        }
-    );
-
-    $('.burger').click(function() {
-        $(this).toggleClass('active');
-        $(this).siblings('nav').slideToggle();
-    });
 
     $(function($) {
         $('form').validatr({
@@ -104,24 +60,6 @@ $(document).ready(function () {
         $(this).parents('form').find('.no-validation').removeClass('invalid-field');
     });
 
-    $('.callback').click(function () {
-        $('.window-callback').fadeIn();
-    });
-    $('.window-callback').click(function (event) {
-        $target = $(event.target);
-        if (!$target.closest($('.form-callback')).length) $('.window-callback').fadeOut();
-        if ($target.hasClass('close-marker')) $('.window-callback').fadeOut();
-    });
-
-    $('.send-cv').click(function () {
-        $('.window-cv').fadeIn();
-    });
-    $('.window-cv').click(function (event) {
-        $target = $(event.target);
-        if (!$target.closest($('.form-cv')).length) $('.window-cv').fadeOut();
-        if ($target.hasClass('close-marker')) $('.window-cv').fadeOut();
-    });
-
     $('input').on('focus', function() {
         $(this).removeClass('valid-field invalid-field');
     });
@@ -133,26 +71,6 @@ $(document).ready(function () {
     inputTel.mask("+38099 999 - 99 - 99");
     inputTel.click(function() {
         $(this).focus();
-    });
-
-    $('.filter li').click(function() {
-        $('.filter .active').removeClass('active');
-        $(this).addClass('active');
-    });
-
-    $('.dish-counter .control').click(function() {
-
-        var inputValue = parseInt($(this).siblings('label').find('input').val());
-
-        if($(this).hasClass('increment')) {
-            inputValue++;
-        } else if($(this).hasClass('decrement') && inputValue > 1) {
-            inputValue--;
-        }
-
-        $(this).siblings('.current-value').html(inputValue);
-        $(this).siblings('label').find('input').val(inputValue);
-
     });
 
     $('.custom-select').hover(
@@ -223,6 +141,7 @@ $(document).ready(function () {
         function(){
             if ($(window).width() > '980'){
                 $(this).find('input').addClass('active');
+                $(this).find('input').trigger('focus');
             }
         },
         function() {
@@ -278,7 +197,7 @@ $(document).ready(function () {
     });
 
     $('.timer ul').downCount({
-        date: '09/20/2016 00:00:00',
+        date: '09/30/2016 00:00:00',
         offset: +3
     });
 
@@ -306,8 +225,15 @@ $(document).ready(function () {
             $(this).siblings('.hidden').css('display', 'block');
         }
 
+    });
 
+    /*******************************
+     ********* about-us ************
+     ******************************/
 
+    $('.about-us-page .show-more').click(function() {
+        $(this).toggleClass('active');
+        $(this).siblings('.hidden').fadeToggle();
     });
 
     /*******************************

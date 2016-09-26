@@ -268,6 +268,9 @@ main {
     display: block;
     min-height: 60vh;
 }
+.slide, .slide:hover, .slide:active {
+    outline: 0;
+}
 
 /******************************
 ********** header ************
@@ -2391,8 +2394,61 @@ nav ul li a:hover:after {
 }
 
 /******************************
-********** general ************
+******* about-us page *********
 ******************************/
+
+.about-us-page .video {
+    background: #808080;
+}
+.about-us-page .video-wrap {
+    width: 78.33333333333333%;
+    padding-top: 44.58333333333333%;
+    margin: 0 auto;
+    position: relative;
+}
+.about-us-page .video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.about-us-page h1 {
+    text-align: center;
+}
+.about-us-page h1:after {
+    margin: 0 auto 3%;
+}
+.about-us-page p, .about-us-page strong {
+    font-size: 1.15em;
+    margin-top: 20px;
+}
+.about-us-page strong {
+    font-size: inherit;
+}
+.about-us-page .show-more {
+    display: block;
+    margin-top: 3%;
+    text-align: center;
+}
+.about-us-page .show-more div {
+    display: inline-block;
+    color: #3680f4;
+    border-bottom: 1px dashed #3680f4;
+    cursor: pointer;
+}
+.about-us-page .show-more .opened {
+    display: none;
+}
+.about-us-page .show-more.active .opened {
+    display: inline-block;
+}
+.about-us-page .show-more.active .closed {
+    display: none;
+}
+.about-us-page .show-more div:hover {
+    border-bottom: 1px dashed transparent;
+}
 
 /******************************
 ********** general ************
