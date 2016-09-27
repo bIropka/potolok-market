@@ -279,6 +279,18 @@ $(document).ready(function () {
         nextArrow: '.slider-controls-history .fa-angle-right'
     });
 
+    $('.slider-team').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        appendArrows: '.slider-controls-team .fa',
+        prevArrow: '.slider-controls-team .fa-angle-left',
+        nextArrow: '.slider-controls-team .fa-angle-right'
+    });
+
+    $('.slider-partners').slick({
+        arrows: false,
+        dots: true
+    });
 
 });
 
